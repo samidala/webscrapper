@@ -17,6 +17,13 @@ The process fetches all the articles from
  
         create database articles;
         
+        
+        If you are using different database, this step may vary.
+         
+        If you are using different database, you may need to change in hibernate.cfg.xml, for  dialect, driver, user name and password
+        
+        Please update with appropriate user name and password. 
+        
  
  2. Create tables. The same script is present in file <u>creation.sql</u> in resources folder.
  
