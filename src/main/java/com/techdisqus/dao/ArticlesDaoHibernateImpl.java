@@ -35,15 +35,17 @@ public class ArticlesDaoHibernateImpl   implements ArticlesDao, ArticleWriteDao,
      */
     public Article saveArticle(Article article){
         Session session = getSession();
+        Transaction transaction = session.beginTransaction();
         try {
-            Transaction transaction = session.beginTransaction();
+
 
             Author author = session.createQuery("from Author where authorName = :authorName ",Author.class)
                     .setParameter("authorName", article.getAuthor().getAuthorName()).uniqueResult();
 
             //not working correctly, need to fix it.
-            /*Statistics statistics1 = getSession().getSessionFactory().getStatistics();
-            System.out.println("***********************second level cache hit count "+ statistics1.getSecondLevelCacheHitCount());*/
+            Statistics statistics1 = getSession().getSessionFactory().getStatistics();
+            System.out.println("***********************second level cache hit count "+ statistics1.getSecondLevelCacheHitCount());
+            getSession().getSessionFactory().getCurrentSession();
             if(author == null){
                 session.save(article.getAuthor());
             }else{
@@ -53,11 +55,18 @@ public class ArticlesDaoHibernateImpl   implements ArticlesDao, ArticleWriteDao,
             session.save(article);
             session.flush();
             transaction.commit();
-            return article;
-        }finally {
+
+        }catch (Exception e){
+            if(transaction != null && transaction.isActive())
+                transaction.rollback();
+        }
+        finally {
             session.close();
         }
+        return article;
     }
+
+
 
 
     /**
