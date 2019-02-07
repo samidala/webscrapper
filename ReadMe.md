@@ -14,19 +14,19 @@ The process fetches all the articles from
  <u>The below are the steps to run the process:</u>
  1. Create tables. The same script is present in file <u>creation.sql</u> in resources folder.
  
- create table AUTHOR(
- AUTHOR_ID int auto_increment,
- AUTHOR_NAME varchar(100),
- primary key(AUTHOR_ID));
+                 create table AUTHOR(
+                 AUTHOR_ID int auto_increment,
+                 AUTHOR_NAME varchar(100),
+                 primary key(AUTHOR_ID));
+                 
+                 create table ARTICLE(
+                 ARTICLE_ID int auto_increment,
+                 AUTHOR_ID int references AUTHOR.AUTHOR_ID,
+                 ARTICLE_NAME varchar(1000),
+                 ARTICLE_DESC varchar(1000),
+                 primary key(ARTICLE_ID));
  
- create table ARTICLE(
- ARTICLE_ID int auto_increment,
- AUTHOR_ID int references AUTHOR.AUTHOR_ID,
- ARTICLE_NAME varchar(1000),
- ARTICLE_DESC varchar(1000),
- primary key(ARTICLE_ID));
- 
- 2. Run com.techdisqus.process.TheHinduWebScrapper
+ 2. Run <b>com.techdisqus.process.TheHinduWebScrapper</b>
  3. The process would take a while to complete as it has to scan for all the articles ranging from 01-Jan-2000 to till date
  
  
@@ -38,7 +38,7 @@ The process fetches all the articles from
  Running Rest API and making calls:
  All the API's are GET calls
  Follow the below steps:
- 1. Start com.techdisqus.App
+ 1. Start <b>com.techdisqus.App</b>
  2. To List all the Authors:
  
     a. curl "http://localhost:8080/authors/all"
