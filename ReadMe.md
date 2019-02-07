@@ -1,8 +1,13 @@
 Scrapping data from  https://www.thehindu.com/archive/
+
+
 The process fetches all the articles from 
+
  https://www.thehindu.com/archive/web/{year}/{month}/{day}
+ 
  https://www.thehindu.com/archive/print/{year}/{month}/{day}
- and updates in database for later search operations.
+ 
+ Updates in database for later search operations.
  
  Please note that the process is <u><b>NOT</b></u> full fledged and hence it requires to manual removal of data from database if any failures.
  
