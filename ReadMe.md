@@ -40,18 +40,31 @@ The process fetches all the articles from
  Follow the below steps:
  1. Start com.techdisqus.App
  2. To List all the Authors:
+ 
     a. curl "http://localhost:8080/authors/all"
+    
  3. Partial search on authors
+ 
     a. curl "http://localhost:8080/authors/name/I"
+    
  4. List all the article by author name
+ 
     a. curl "http://localhost:8080/author/articles/name/NIKHIL%20VARMA"
+    
  5. List all the article by author ID
+ 
     a. curl "http://localhost:8080/author/articles/id/4"
+    
  6. Search articles by title
+ 
     a. curl "http://localhost:8080/articles/title/best/"
+    
  7. Search articles by description
+ 
     a. curl "http://localhost:8080/articles/desc/anjan/"
+    
  8. Search articles by title and description
+ 
     a. curl "http://localhost:8080/best/anjan"
     
  
