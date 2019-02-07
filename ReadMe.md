@@ -12,7 +12,13 @@ The process fetches all the articles from
  Please note that the process is <u><b>NOT</b></u> full fledged and hence it requires to manual removal of data from database if any failures.
  
  <u>The below are the steps to run the process:</u>
- 1. Create tables. The same script is present in file <u>creation.sql</u> in resources folder.
+ 
+ 1. I am using mySQL database. the step may vary depending on DB. Create database with name articles <b>articles</b>
+ 
+        create database articles;
+        
+ 
+ 2. Create tables. The same script is present in file <u>creation.sql</u> in resources folder.
  
                  create table AUTHOR(
                  AUTHOR_ID int auto_increment,
@@ -26,8 +32,8 @@ The process fetches all the articles from
                  ARTICLE_DESC varchar(1000),
                  primary key(ARTICLE_ID));
  
- 2. Run <b>com.techdisqus.process.TheHinduWebScrapper</b>
- 3. The process would take a while to complete as it has to scan for all the articles ranging from 01-Jan-2000 to till date
+ 3. Run <b>com.techdisqus.process.TheHinduWebScrapper</b>
+ 4. The process would take a while to complete as it has to scan for all the articles ranging from 01-Jan-2000 to till date
  
  
  In case of process failure, before retrying:
