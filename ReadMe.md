@@ -2,9 +2,9 @@ Overview:
 
 Problem statement:
 
-1. Scrap newspaper articles data from https://www.thehindu.com/archive/ 2.
+1. Scrap newspaper articles data from https://www.thehindu.com/archive/ 
 
-Create a REST service which answers following queries from scrap data:
+2.Create a REST service which answers following queries from scrap data:
 
 a. Search available authors
 
