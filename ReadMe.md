@@ -1,5 +1,24 @@
-Scrapping data from  https://www.thehindu.com/archive/
+Overview:
 
+Problem statement:
+
+1. Scrap newspaper articles data from https://www.thehindu.com/archive/ 2.
+
+Create a REST service which answers following queries from scrap data:
+
+a. Search available authors
+
+b. Search articles based on author name
+
+c. Search articles based on article title and description
+
+Used mysql as backend, hibernate as JPA. 
+
+The above API's are developed using Spring boot and REST.
+
+
+
+The process flow:
 
 The process fetches all the articles from 
 
