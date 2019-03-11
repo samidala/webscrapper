@@ -6,11 +6,11 @@
 
 2. Create a REST service which answers following queries from scrap data:
 
-  a. Search available authors
+    a. Search available authors
 
-  b. Search articles based on author name
+    b. Search articles based on author name
 
-  c. Search articles based on article title and description
+    c. Search articles based on article title and description
 
 
 <u><b>Tech stack</b></u>:
