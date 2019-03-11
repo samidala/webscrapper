@@ -1,20 +1,23 @@
 Overview:
 
-Problem statement:
+<u><b>Problem statement</b></u>:
 
 1. Scrap newspaper articles data from https://www.thehindu.com/archive/ 
 
 2.Create a REST service which answers following queries from scrap data:
 
-a. Search available authors
+  a. Search available authors
 
-b. Search articles based on author name
+  b. Search articles based on author name
 
-c. Search articles based on article title and description
+  c. Search articles based on article title and description
 
-Used mysql as backend, hibernate as JPA. 
 
-The above API's are developed using Spring boot and REST.
+Tech stack
+
+1. The app is using mysql as backend, hibernate as JPA. 
+
+2. The above API's are developed using Spring boot and REST.
 
 
 
