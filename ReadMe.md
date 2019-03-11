@@ -13,7 +13,7 @@ Overview:
   c. Search articles based on article title and description
 
 
-Tech stack
+<u><b>Tech stack</b></u>:
 
 1. The app is using mysql as backend, hibernate as JPA. 
 
@@ -21,7 +21,7 @@ Tech stack
 
 
 
-The process flow:
+<u><b>The process flow</b></u>:
 
 The process fetches all the articles from 
 
