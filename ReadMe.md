@@ -1,10 +1,10 @@
-Overview:
+<u><b>Overview</b></u>:
 
 <u><b>Problem statement</b></u>:
 
 1. Scrap newspaper articles data from https://www.thehindu.com/archive/ 
 
-2.Create a REST service which answers following queries from scrap data:
+2. Create a REST service which answers following queries from scrap data:
 
   a. Search available authors
 
